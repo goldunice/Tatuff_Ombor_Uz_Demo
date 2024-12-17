@@ -1,0 +1,15 @@
+{
+    "builds":[
+        {
+            "src":"sozlamalar/wsgi.py",
+            "use":"@vercel/python",
+            "config":{"maxLambdaSiza":"15mb", "runtime":"python3.9"}
+        }
+    ],
+    "routes":[
+        {
+            "src": "/(.*)",
+            "dest": "sozlamalar/wsgi.py"
+        }
+    ]
+}
